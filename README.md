@@ -11,7 +11,7 @@ The reason behind this is adding support for the **M1 chip MacBooks with Big Sur
 2. Install XCode Command Line Tools via `xcode-select --install`
 3. Install CMake `brew install cmake`
 4. Install OpenSSL `brew install openssl`
-5. Create an environment variable named `OPENSSL_ROOT_DIR` that points to the openssl library installation path (default is `/usr/local/opt/openssl`, but on the M1 the brew packages should be under `/opt/homebrew`)
+5. Create an environment variable named `OPENSSL_ROOT_DIR` that points to the openssl library installation path (default is `/usr/local/opt/openssl`, but on the M1 the brew packages should be under `/opt/homebrew/opt/openssl`)
 
 ## Building
 
@@ -32,5 +32,5 @@ To create distributable packages, invoke `cpack` in `build` directory (after `ma
 Finally move the libseabolt to the standard directory where other tools will search for it:
 ```console
 cd build/dist/lib
-cp libseabolt17.dylib /usr/local/lib/libseabolt17.dylib
+cp libseabolt17.dylib /usr/local/bin/libseabolt17.dylib
 ```
